@@ -1,0 +1,19 @@
+# Enforce consistent line endings for text files
+* text=auto
+
+# Force LF in Python and shell scripts in the repo
+*.py text eol=lf
+*.sh text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+
+# Binary files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.ico binary
+*.exe binary
+*.dll binary

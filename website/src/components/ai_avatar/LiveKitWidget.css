@@ -1,0 +1,40 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.04);
+  padding: 24px;
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+  padding: 20px;
+  width: 680px;
+  max-width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  pointer-events: auto; /* re-enable clicks inside modal */
+}
+
+.support-room {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.name-form input,
+.name-form button {
+  margin-top: 8px;
+  width: 100%;
+  padding: 8px;
+}
+
+.cancel-button {
+  background-color: #eee;
+  color: #333;
+}
