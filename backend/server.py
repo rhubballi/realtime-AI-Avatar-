@@ -9,7 +9,7 @@ import uuid
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "https://chatbotrealtime.netlify.app/"}})
+CORS(app, resources={r"/*": {"origins": "**"}})
 
 async def generate_room_name():
     name = "room-" + str(uuid.uuid4())[:8]
