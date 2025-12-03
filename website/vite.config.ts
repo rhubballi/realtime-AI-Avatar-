@@ -8,7 +8,7 @@ export default defineConfig(({ mode }) => ({
   server: {
     proxy: {
       "/api": {
-        target: "http://localhost:5001",
+        target: "https://realtime-ai-avatar-jxcp.onrender.com",
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, "")
       }

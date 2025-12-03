@@ -9,7 +9,16 @@ import uuid
 load_dotenv()
 
 app = Flask(__name__)
+# Enable CORS for all routes and origins
 CORS(app, resources={r"/*": {"origins": "*"}})
+
+# Explicit CORS headers for preflight and actual requests
+@app.after_request
+def after_request(response):
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization')
+    response.headers.add('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS')
+    return response
 
 async def generate_room_name():
     name = "room-" + str(uuid.uuid4())[:8]
