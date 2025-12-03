@@ -12,7 +12,7 @@ const Index = () => {
     setIsLoading(true);
     setError("");
     try {
-      const response = await fetch("https://realtime-ai-avatar-jxcp.onrender.com/getToken?name=Guest&room=default-room");
+      const response = await fetch("http://localhost:5001/getToken?name=Guest&room=default-room");
       if (!response.ok) throw new Error("Failed to get token from backend");
       const tokenData = await response.text();
       setToken(tokenData);
